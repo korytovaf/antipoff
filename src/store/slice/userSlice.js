@@ -61,7 +61,7 @@ export const userSlice = createSlice({
       state.total_pages = action.payload.total_pages;
 
       const likedUsers = () => {
-        const savedLiked = localStorage.getItem('listLiked');
+        const savedLiked = localStorage.getItem('listLiked') || [];
         return action.payload.data.map(user => {
           const index = savedLiked.indexOf(user.id);
           if (~index) {
@@ -90,19 +90,6 @@ export const userSlice = createSlice({
       state.status = 'reject';
       state.error = action.payload;
     },
-
-
-    // [fetchPutUserItem.pending]: (state) => {
-    //   state.status = 'loading'
-    // },
-    // [fetchPutUserItem.fulfilled]: (state, action) => {
-    //   state.status = 'resolve';
-    //   state.user = action.payload.data;
-    // },
-    // [fetchPutUserItem.rejected]: (state, action) => {
-    //   state.status = 'reject';
-    //   state.error = action.payload;
-    // },
 
   },
 });
