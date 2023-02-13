@@ -1,0 +1,70 @@
+.header {
+  min-height: 265px;
+  background-color: #512689;
+  color: #F8F8F8;
+}
+
+.header_container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px;
+
+  @media (max-width: 768px) {
+    padding: 21px 27px;
+  }
+}
+
+.header_btn_wrap {
+  position: relative;
+  //display: flex;
+  //justify-content: space-between;
+}
+
+.header_btn {
+  position: relative;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid #F8F8F8;
+  border-radius: 8px;
+  background: transparent;
+  color: #F8F8F8;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    border: none;
+    padding: 0;
+  }
+
+  span {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  svg {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.header_btn_auth {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header_btn_back {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  svg {
+    width: 14px;
+    height: 7px;
+    transform: rotate(90deg);
+    fill: #F8F8F8;
+  }
+}

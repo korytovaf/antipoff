@@ -1,0 +1,36 @@
+.input_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_label {
+  margin-bottom: 8px;
+}
+
+.input {
+  padding: 12px 8px 12px 16px;
+  background: #F8F8F8;
+  border-radius: 8px;
+  border: none;
+}
+
+.input_error {
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FF6161;
+}
+
+.input_icon_btn {
+  position: absolute;
+  top: 37px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  & + input {
+    padding-right: 40px;
+  }
+}
