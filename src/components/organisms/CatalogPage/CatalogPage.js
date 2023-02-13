@@ -20,7 +20,7 @@ export const CatalogPage = () => {
     dispatch(fetchGetUsers({
       query: {
         per_page: PER_PAGE,
-        page: searchParams.get('page'),
+        page: searchParams.get('page') || 1,
       },
     }));
   }, [currentPage, dispatch, searchParams]);
